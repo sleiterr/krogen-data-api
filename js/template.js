@@ -61,24 +61,39 @@ export const templates = () => {
   /* ------------ HERO-SECTION ------------ */
   const headerTemplate = () => {
     return `
-      <img class="image-in-slide" src="" alt="" />
-
-        <div class="hero-container">
-          <div class="hero-content">
-            <h1 class="hero-title">At lege er at leve</h1>
-            <p class="hero-context">
-              Her hos os har vi et stort udvalg af legetøj i høj kvalitet
-            </p>
-            <a href="./linkpoint.html" class="hero-link-point" target="_blank">
-              Læs mere
-              <i class="icon-cheveron-right arrow"></i>
-            </a>
-          </div>
-        </div>
-        `;
+    <img class="image-in-slide" src="" alt="" />
+    
+    <div class="hero-container">
+    <div class="hero-content">
+    <h1 class="hero-title">At lege er at leve</h1>
+    <p class="hero-context">
+    Her hos os har vi et stort udvalg af legetøj i høj kvalitet
+    </p>
+    </div>
+    </div>
+    `;
   };
-
+  
   insertTemplate(".section-hero", headerTemplate);
+  
+  
+  /* ------------ CUSTOMER-HERO ------------ */
+  // const customerHeroTemplate = () => {
+  //   return `
+  //     <img class="image-in-slide" src="" alt="" />
+
+  //       <div class="hero-container">
+  //         <div class="hero-content">
+  //           <h1 class="hero-title">At lege er at leve</h1>
+  //           <p class="hero-context">
+  //             Her hos os har vi et stort udvalg af legetøj i høj kvalitet
+  //           </p>
+  //         </div>
+  //       </div>
+  //       `;
+  // };
+
+  // insertTemplate(".customer-hero", customerHeroTemplate);
 
   /* ------------ FEATURE-SECTION ------------ */
 
@@ -151,7 +166,7 @@ export const templates = () => {
             <h4 class="costomer-title">Kundeklub ?</h4>
           </div>
           <div class="link-box">
-            <a href="#" class="customer-link">bliv medlem  nu !</a>
+            <a href="../customer.html" class="customer-link" target="_blank">bliv medlem  nu !</a>
           </div>
         </div>
         `;
