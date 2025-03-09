@@ -78,23 +78,24 @@ export const templates = () => {
 
   insertTemplate(".section-hero", headerTemplate);
 
-  /* ------------ CUSTOMER-HERO ------------ */
-  // const customerHeroTemplate = () => {
-  //   return `
-  //     <img class="image-in-slide" src="" alt="" />
+  /* ------------ HERO-CUSTOMER ------------ */
+  const customerHeroTemplate = () => {
+    return `
+     <img class="image-customer" src="" alt="" />
 
-  //       <div class="hero-container">
-  //         <div class="hero-content">
-  //           <h1 class="hero-title">At lege er at leve</h1>
-  //           <p class="hero-context">
-  //             Her hos os har vi et stort udvalg af legetøj i høj kvalitet
-  //           </p>
-  //         </div>
-  //       </div>
-  //       `;
-  // };
+        <div class="customer-hero-wrapper">
+          <div class="hero-customer">
+            <p class="customer-caption">Bliv medlem af vores</p>
+            <h1 class="customer-title">kundeklub</h1>
+            <p class="customer-context">
+              og få ekslusive tilbud og nyheder før alle andre
+            </p>
+          </div>
+        </div>
+    `;
+  };
 
-  // insertTemplate(".customer-hero", customerHeroTemplate);
+  insertTemplate(".customer-hero", customerHeroTemplate);
 
   /* ------------ FEATURE-SECTION ------------ */
 
@@ -157,13 +158,46 @@ export const templates = () => {
   insertTemplate(".customer-section", customerTemplate);
 
   /* ------------ FORM-SECTION ------------ */
-  // const formTemplate = () => {
-  //   return `
+  const formTemplate = () => {
+    return `
+           <div class="form-container container">
+          <div class="form-subscription">
+            <h2 class="input-title-email"></h2>
+            <form action="#" method="POST" class="form-data" id="order-data">
+              <div class="name-form">
+                <input
+                  type="text"
+                  name="firstName"
+                  id="name-tx"
+                  required
+                  minlength="2"
+                  maxlength="20"
+                  placeholder="Fulde navn"
+                />
+                <p class="mesg"></p>
+                <input
+                  type="email"
+                  name="email"
+                  id="email-txt"
+                  class=""
+                  placeholder="Email"
+                />
+              </div>
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+                placeholder="Hvem køber du legetøj til ?"
+              ></textarea>
+              <input type="submit" value="BLIV MEDLEM NU !" id="form-submit" />
+            </form>
+          </div>
+        </div>
+    `;
+  };
 
-  //       `;
-  // };
-
-  // insertTemplate(".form-section", formTemplate);
+  insertTemplate(".form-section", formTemplate);
 
   /* ------------ FOOTER------------ */
   const footerTemplate = () => {

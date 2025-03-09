@@ -1,0 +1,124 @@
+/**==============================*/
+/*! FOOTER*/
+/**==============================*/
+
+.footer {
+  background-color: rgb(53, 86, 116);
+  width: 100vw;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 90px 180px;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.footer-title {
+  font-family: "Square Peg";
+  font-weight: 400;
+  font-size: 40px;
+
+  color: #fff;
+  line-height: normal;
+  letter-spacing: 2px;
+
+  margin-bottom: 6px;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  gap: 9px;
+}
+
+.contact-item {
+}
+
+.contact-title {
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+
+  color: #fff;
+  letter-spacing: 0.06em;
+  line-height: normal;
+}
+
+.address {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  font-weight: 400;
+  font-size: 18px;
+
+  color: #fff;
+  line-height: 22px; /* 122.222% */
+}
+
+.address i {
+}
+
+.address:hover,
+.address:active {
+  color: rgb(199, 199, 199);
+  transition: 250ms ease;
+}
+
+.icon-container {
+}
+
+.title-icon {
+  font-family: "Square Peg";
+  font-weight: 400;
+  font-size: 40px;
+
+  color: #fff;
+  text-align: center;
+  letter-spacing: 2px;
+
+  margin-bottom: 9px;
+}
+
+.footer-icon-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.icon-social {
+  width: 40px;
+  height: 40px;
+}
+/* 
+.icon-social:hover {
+  border: 1px solid #fff;
+  padding: 8px;
+  border-radius: 50%;
+} */
+
+.footer-logo {
+  height: 90px;
+  width: 140px;
+}
+
+.footer-menu {
+}
+
+.footer-logo {
+  width: 184px;
+  height: 74px;
+}

@@ -1,0 +1,97 @@
+/*******************************/
+/*! HEADER */
+/*******************************/
+/*? INFO-DISCOUNT */
+
+.info-discont {
+  background-color: rgba(215, 230, 236, 1);
+}
+
+.discount-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+  padding: 10px 0;
+}
+
+.items-discount {
+  width: 10px;
+  height: 8px;
+}
+
+.discount-textt {
+  font-weight: 500;
+  font-size: 10px;
+  color: #355674;
+
+  line-height: normal;
+  letter-spacing: 0.5px;
+}
+
+/*? NAV-LOGO */
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: rgba(53, 86, 116, 1);
+}
+
+.logo-nav {
+  padding: 9px 0;
+}
+
+.nav-logo {
+  width: 114px;
+  height: 46px;
+  margin-left: 140px;
+}
+
+/*? BURGER-BTTN */
+
+.burger-btn {
+  display: none;
+}
+
+/* .nav-list-menu.show {
+  display: flex;
+} */
+
+/* .nav-menu.show {
+  display: flex;
+} */
+
+/*? NAV-BAR */
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  /* margin: auto; */
+}
+
+.nav-link {
+  font-weight: 400;
+  font-size: 18px;
+
+  color: #fff;
+  line-height: 22px;
+  letter-spacing: 0.45px;
+  margin-right: 58px;
+}
+
+.nav-link:hover {
+  color: rgb(255, 255, 255, 0.8);
+  transition: 0.3s ease;
+}
+
+.nav-item:last-child .nav-link {
+  margin-right: 105px;
+}
+
+/* no margin-right for last-child "Contact-us" */

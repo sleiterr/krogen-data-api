@@ -1,0 +1,85 @@
+/**==============================*/
+/*! PRODUCT-SECTION*/
+/**==============================*/
+
+.product-section {
+  width: 100vw;
+}
+
+/*? PRODUCT-TESTIMONIALS */
+.heading-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 60px;
+}
+
+.product-title {
+  font-family: "Square Peg";
+  font-weight: 400;
+  font-size: 50px;
+
+  color: #355674;
+  line-height: normal;
+  letter-spacing: 2.5px;
+}
+
+.product-subtitle {
+  font-weight: 300;
+  font-size: 55px;
+
+  color: #355674;
+  line-height: normal;
+  letter-spacing: 1.375px;
+  text-transform: uppercase;
+}
+
+.product-testimonial {
+  /* background-color: rgba(243, 248, 249, 1); */
+  padding: 90px 0;
+}
+
+.testimonial-context {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.testimonials-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 90px;
+}
+
+.testimonial-items {
+  width: 100%;
+}
+
+.testimonial-title {
+  font-weight: 400;
+  font-size: 18px;
+
+  color: #355674;
+  text-align: center;
+  line-height: 22px;
+
+  width: 528px;
+  margin-bottom: 13px;
+}
+
+.testimonial-subtitle {
+  font-family: "Square Peg";
+  font-weight: 400;
+  font-size: 24px;
+
+  color: #9478a7;
+  text-align: center;
+  line-height: normal;
+}

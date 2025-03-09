@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Square+Peg&display=swap");
+
+/* rest */
+@import url("./base/rest.css");
+
+/* Components */
+@import url("./components/nav-bar.css");
+@import url("./components/hero-section.css");
+@import url("./components/products.css");
+@import url("./components/customer.css");
+@import url("./components/footer.css");
+@import url("./components/feature.css");
+@import url("./components/hero-customer.css");
+@import url("./components/form.css");
+@import url("./components/subscribers.css");
