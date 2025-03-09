@@ -80,44 +80,28 @@ export const templates = () => {
 
   insertTemplate(".section-hero", headerTemplate);
 
+  /* ------------ FEATURE-SECTION ------------ */
+
+  // insertTemplate(".feature-section", featureTemplate);
+
   /* ------------ PRODUCT-SECTION ------------ */
   const productTemplate = () => {
     return `
-         <div class="product-container">
-          <div class="product-overview">
-            <div class="product-context">
-              <h4 class="product-title">Månedens</h4>
-              <p class="product-subtitle">Favorit</p>
-              <div class="product-rating">
-                <img src="./icons/star-solid.svg" alt="star-rating" />
-                <img src="./icons/star-solid.svg" alt="star-rating" />
-                <img src="./icons/star-solid.svg" alt="star-rating" />
-                <img src="./icons/star-solid.svg" alt="star-rating" />
-                <img src="./icons/star-regular.svg" alt="star-rating" />
-              </div>
-            </div>
-            <img
-              src="./img/product-5.jpg"
-              alt="product-img"
-              class="img-product"
-            />
-            <div class="product-img-overview">
-              <p class="product-text">Kids Concept</p>
-              <p class="product-text">Neo gyngedinosaur</p>
-              <p class="product-price">749 kr</p>
-            </div>
-            <a href="./linkpoint.html" class="product-link" target="_blank"
-              >KØB GYNGEHESTEN HER</a
-            >
-          </div>
-
+     <div class="product-container container">
           <!--? TESTIMONIAL -->
           <div class="product-testimonial">
+            <div class="heading-product">
+              <h4 class="product-title">Vores kunder</h4>
+              <p class="product-subtitle">UDTALER</p>
+            </div>
             <div class="testimonial-context">
               <ul class="testimonials-list">
                 <li class="testimonial-items">
                   <h4 class="testimonial-title">
-                    “Bedste gyngehest nogenside”
+                    “Pakken kom dagen efter jeg bestilte. Der blev jeg positivt
+                    overrasket, da der står på deres hjemmeside at
+                    leveringstiden er 2-4 hverdage. Og min lille Hugo elsker sin
+                    nye træhest.”
                   </h4>
                   <p class="testimonial-subtitle">
                     - Andreas, far til Michael på 1 år
@@ -125,8 +109,10 @@ export const templates = () => {
                 </li>
                 <li class="testimonial-items">
                   <h4 class="testimonial-title">
-                    “Min søn elsker sin nye trægyndehest. Han kalder den
-                    Hannibal”
+                    “Jeg fik varen tilsendt i den forkerte farve, men da jeg
+                    kontaktede Legekrogens kundeservice, var de meget hurtige
+                    til at sende mig den rigtige farve. Jeg fik endda en gratis
+                    slikpose med. Det var meget lækkert”
                   </h4>
                   <p class="testimonial-subtitle">
                     - Heidi, mor til Hugo på 3 år
@@ -134,7 +120,12 @@ export const templates = () => {
                 </li>
                 <li class="testimonial-items">
                   <h4 class="testimonial-title">
-                    “Virkelig god kvalitet, og pæn at ha stående i stuen”
+                    “Når jeg skal bestille julegaver til alle mine 14 børnebørn,
+                    er det næsten en umulig opgave. Mine døtre har meget høje
+                    krav, når det kommer til legetøj til deres børn. Jeg tør
+                    næsten ikke købe noget. Men efter min gode ven Lars tippede
+                    mig om Legekrogen.dk, har jeg ikke længere problemer med at
+                    købe de perfekte julegaver. Tak til Legekrogen. Og Lars”
                   </h4>
                   <p class="testimonial-subtitle">
                     - Camilla, mor til Sophia på 9 måneder
@@ -149,54 +140,33 @@ export const templates = () => {
 
   insertTemplate(".product-section", productTemplate);
 
-  /* ------------ FORM-SECTION ------------ */
-  const formTemplate = () => {
+  /* ------------ CUSTOMER-SECTION ------------ */
+  const customerTemplate = () => {
     return `
-            <div class="form-container container">
-          <div class="form-subscription">
-            <div class="form-context">
-              <p class="form-subtitle">
-                Kunne du også tænke dig at blive medlem af vores
-              </p>
-              <h2 class="subscription-title">Kundeklub ?</h2>
-            </div>
-
-            <h2 class="input-title-email"></h2>
-            <form action="#" method="POST" class="form-data" id="order-data">
-              <div class="name-form">
-                <input
-                  type="text"
-                  name="firstName"
-                  id="name-tx"
-                  required
-                  minlength="2"
-                  maxlength="20"
-                  placeholder="Fulde navn"
-                />
-                <p class="mesg"></p>
-                <input
-                  type="email"
-                  name="email"
-                  id="email-txt"
-                  class=""
-                  placeholder="Email"
-                />
-              </div>
-              <textarea
-                name="message"
-                id="message"
-                cols="30"
-                rows="10"
-                placeholder="Hvem køber du legetøj til?"
-              ></textarea>
-              <input type="submit" value="BLIV MEDLEM NU!" id="form-submit" />
-            </form>
+    <div class="customer-container container">
+          <div class="costomer-subject">
+            <p class="costomer-subtitle">
+              Kunne du også tænke dig at blive medlem af vores
+            </p>
+            <h4 class="costomer-title">Kundeklub ?</h4>
+          </div>
+          <div class="link-box">
+            <a href="#" class="customer-link">bliv medlem  nu !</a>
           </div>
         </div>
         `;
   };
 
-  insertTemplate(".form-section", formTemplate);
+  insertTemplate(".customer-section", customerTemplate);
+
+  /* ------------ FORM-SECTION ------------ */
+  // const formTemplate = () => {
+  //   return `
+
+  //       `;
+  // };
+
+  // insertTemplate(".form-section", formTemplate);
 
   /* ------------ FOOTER------------ */
   const footerTemplate = () => {
@@ -285,7 +255,7 @@ export const featureTemplate = (product) => {
                   <p class="feature-price">849 kr</p>
                 </div>
               </li>
-             
+
             </ul>
             <a href="./linkpoint.html" class="feature-link" target="_blank">
               GÅ TIL LEGETØJ
