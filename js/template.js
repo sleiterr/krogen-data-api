@@ -1,3 +1,5 @@
+import { fetchReviews } from "../Data/fetch-data.js";
+
 export const templates = () => {
   // hjælpefunktion - indesætter dynamisk template-functions i html'en
   const insertTemplate = (selector, templateFunction) => {
@@ -73,10 +75,9 @@ export const templates = () => {
     </div>
     `;
   };
-  
+
   insertTemplate(".section-hero", headerTemplate);
-  
-  
+
   /* ------------ CUSTOMER-HERO ------------ */
   // const customerHeroTemplate = () => {
   //   return `
@@ -100,60 +101,41 @@ export const templates = () => {
   // insertTemplate(".feature-section", featureTemplate);
 
   /* ------------ PRODUCT-SECTION ------------ */
-  const productTemplate = () => {
+  const productTemplate = (reviews) => {
     return `
      <div class="product-container container">
-          <!--? TESTIMONIAL -->
-          <div class="product-testimonial">
-            <div class="heading-product">
-              <h4 class="product-title">Vores kunder</h4>
-              <p class="product-subtitle">UDTALER</p>
-            </div>
-            <div class="testimonial-context">
-              <ul class="testimonials-list">
-                <li class="testimonial-items">
-                  <h4 class="testimonial-title">
-                    “Pakken kom dagen efter jeg bestilte. Der blev jeg positivt
-                    overrasket, da der står på deres hjemmeside at
-                    leveringstiden er 2-4 hverdage. Og min lille Hugo elsker sin
-                    nye træhest.”
-                  </h4>
-                  <p class="testimonial-subtitle">
-                    - Andreas, far til Michael på 1 år
-                  </p>
-                </li>
-                <li class="testimonial-items">
-                  <h4 class="testimonial-title">
-                    “Jeg fik varen tilsendt i den forkerte farve, men da jeg
-                    kontaktede Legekrogens kundeservice, var de meget hurtige
-                    til at sende mig den rigtige farve. Jeg fik endda en gratis
-                    slikpose med. Det var meget lækkert”
-                  </h4>
-                  <p class="testimonial-subtitle">
-                    - Heidi, mor til Hugo på 3 år
-                  </p>
-                </li>
-                <li class="testimonial-items">
-                  <h4 class="testimonial-title">
-                    “Når jeg skal bestille julegaver til alle mine 14 børnebørn,
-                    er det næsten en umulig opgave. Mine døtre har meget høje
-                    krav, når det kommer til legetøj til deres børn. Jeg tør
-                    næsten ikke købe noget. Men efter min gode ven Lars tippede
-                    mig om Legekrogen.dk, har jeg ikke længere problemer med at
-                    købe de perfekte julegaver. Tak til Legekrogen. Og Lars”
-                  </h4>
-                  <p class="testimonial-subtitle">
-                    - Camilla, mor til Sophia på 9 måneder
-                  </p>
-                </li>
-              </ul>
-            </div>
+        <!--? TESTIMONIAL -->
+        <div class="product-testimonial">
+          <div class="heading-product">
+            <h4 class="product-title">Vores kunder</h4>
+            <p class="product-subtitle">UDTALER</p>
+          </div>
+          <div class="testimonial-context">
+            <ul class="testimonials-list">
+            ${reviews.map(reviewTemplate).join("")}
+            </ul>
           </div>
         </div>
-        `;
+      </div>
+    `;
   };
 
-  insertTemplate(".product-section", productTemplate);
+  const reviewTemplate = (review) => {
+    return `
+    <li class="testimonial-items">
+      <h4 class="testimonial-title">${review.description}</h4>
+      <p class="testimonial-subtitle">${review.name}</p>
+    </li>
+    `;
+  };
+
+  const renderProducts = async () => {
+    const reviews = await fetchReviews();
+    const productHTML = productTemplate(reviews);
+    insertTemplate(".product-section", () => productHTML);
+  };
+
+  renderProducts();
 
   /* ------------ CUSTOMER-SECTION ------------ */
   const customerTemplate = () => {

@@ -14,7 +14,7 @@ export const fetchProducts = async () => {
 export const fetchReviews = async () => {
   try {
     const response = await fetch(
-      "https://mcd-web-legekrogen-server.vercel.app/products"
+      "https://mcd-web-legekrogen-server.vercel.app/reviews"
     );
     const reviews = await response.json();
     return reviews.data;
