@@ -263,36 +263,20 @@ export const templates = () => {
 /* ------------ FEATURE-SECTION ------------ */
 export const featureTemplate = (product) => {
   return `
-         <div class="feaure-container container">
-          <div class="feature-caption">
-            <h2 class="feature-title">Et udpluk af vores</h2>
-            <p class="feature-subtitle">Legetøj</p>
-          </div>
-          <div class="feature-box">
-            <!--? FEATURE-LIST -->
-            <ul class="features-list">
-              <li class="feature-item">
-                <div class="features-item-block">
-                  <img
-                    src="${product.image}"
-                    alt="product-cart"
-                    class="product-cart"
-                  />
-                </div>
+    <li class="feature-item">
+      <div class="features-item-block">
+        <img
+          src="${product.image}"
+          alt="${product.title}"
+          class="product-cart"
+        />
+      </div>
 
-                <div class="feature-content">
-                  <p class="feature-item-text">${product.title}</p>
-                  <h3 class="feature-heading">Tandlægesæt i træ</h3>
-                  <p class="feature-price">849 kr</p>
-                </div>
-              </li>
-
-            </ul>
-            <a href="./linkpoint.html" class="feature-link" target="_blank">
-              GÅ TIL LEGETØJ
-              <i class="icon-cheveron-right arrow-feature"></i>
-            </a>
-          </div>
-        </div>
-        `;
+      <div class="feature-content">
+        <p class="feature-item-text">${product.title}</p>
+        <h3 class="feature-heading">${product.description}</h3>
+        <p class="feature-price">${product.price}</p>
+      </div>
+    </li>
+  `;
 };

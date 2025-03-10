@@ -5,14 +5,25 @@
 /**==============================*/
 
 .section-linkpoint {
-  background-color: #355674;
 }
 
 .container-linkpoint {
+  background-image: linear-gradient(
+      90deg,
+      rgba(148, 120, 167, 0.7) 50%,
+      rgba(148, 120, 167, 0.7) 100%
+    ),
+    url("/img/medlem.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 
+  gap: 50px;
   padding: 90px 0;
   width: 100vw;
   height: 100vh;
@@ -28,11 +39,29 @@
 .title-linkpoint {
   font-family: "Square Peg";
   font-weight: 400;
-  font-size: 75px;
+  /* font-size: 75px; */
+  font-size: clamp(65px, 4vw, 75px);
 
   color: #fff;
   text-align: center;
+  line-height: 86px;
+}
+
+.subscriber-subtitle {
+  padding-bottom: 22px;
+}
+
+.subscriber-subtitle,
+.subscriber-text {
+  font-weight: 400;
+  font-size: 18px;
+
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.02em;
   line-height: normal;
+
+  width: 55%;
 }
 
 .link-btn {
@@ -44,7 +73,7 @@
   letter-spacing: 0.7px;
   text-transform: uppercase;
 
-  background-color: rgb(148, 120, 167);
+  background-color: rgba(53, 86, 116, 1);
   border-radius: 23px;
   padding: 14px 0;
   width: 400px;
@@ -52,6 +81,6 @@
 
 .link-btn:hover,
 .link-btn:active {
-  background-color: rgb(175, 134, 202);
-  transition: 250ms ease;
+  background-color: rgb(15, 68, 117);
+  transition: 0.3s ease;
 }
