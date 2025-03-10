@@ -48,7 +48,7 @@ export const templates = () => {
             <a href="./products.html" class="nav-link" target="_blank">Producter</a>
           </li>
           <li class="nav-item">
-            <a href="#favorit" class="nav-link">faq</a>
+             <a href="./faq.html" class="nav-link" target="_blank">faq</a>
           </li>
           <li class="nav-item">
             <a href="#customerclub" class="nav-link">Kundeklubben</a>
