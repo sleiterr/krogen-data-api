@@ -1,7 +1,7 @@
 import { fetchReviews } from "../Data/fetch-data.js";
+import { productHeroTemplate } from "../js/product/hero-product.js";
 
 export const templates = () => {
-  // hjælpefunktion - indesætter dynamisk template-functions i html'en
   const insertTemplate = (selector, templateFunction) => {
     const htmlContainer = document.querySelector(selector);
 
@@ -9,6 +9,7 @@ export const templates = () => {
 
     htmlContainer.insertAdjacentHTML("beforeend", templateFunction());
   };
+  // hjælpefunktion - indesætter dynamisk template-functions i html'en
 
   /* ------------ NAV-BAR ------------ */
   const navTemplate = () => {
@@ -44,13 +45,13 @@ export const templates = () => {
 
         <ul class="nav-menu">
           <li class="nav-item">
-            <a href="#toy" class="nav-link">Legetøj</a>
+            <a href="./products.html" class="nav-link" target="_blank">Producter</a>
           </li>
           <li class="nav-item">
-            <a href="#favorit" class="nav-link">Månedens favorit</a>
+            <a href="#favorit" class="nav-link">faq</a>
           </li>
           <li class="nav-item">
-            <a href="#customerclub" class="nav-link">Kundeklub</a>
+            <a href="#customerclub" class="nav-link">Kundeklubben</a>
           </li>
         </ul>
       </nav>
@@ -63,15 +64,15 @@ export const templates = () => {
   /* ------------ HERO-SECTION ------------ */
   const headerTemplate = () => {
     return `
-    <img class="image-in-slide" src="" alt="" />
-    
     <div class="hero-container">
-    <div class="hero-content">
-    <h1 class="hero-title">At lege er at leve</h1>
-    <p class="hero-context">
-    Her hos os har vi et stort udvalg af legetøj i høj kvalitet
-    </p>
-    </div>
+      <div class="hero-content">
+      <div class="hero-subtitle">
+       <h1 class="hero-title">At lege er at leve</h1>
+       <p class="hero-context">
+        Her hos os har vi et stort udvalg af legetøj i høj kvalitet
+       </p>
+      </div>
+      </div>
     </div>
     `;
   };
@@ -105,7 +106,6 @@ export const templates = () => {
   const productTemplate = (reviews) => {
     return `
      <div class="product-container container">
-        <!--? TESTIMONIAL -->
         <div class="product-testimonial">
           <div class="heading-product">
             <h4 class="product-title">Vores kunder</h4>
@@ -257,26 +257,7 @@ export const templates = () => {
         `;
   };
 
+  insertTemplate(".product-hero", productHeroTemplate);
+
   insertTemplate(".footer", footerTemplate);
-};
-
-/* ------------ FEATURE-SECTION ------------ */
-export const featureTemplate = (product) => {
-  return `
-    <li class="feature-item">
-      <div class="features-item-block">
-        <img
-          src="${product.image}"
-          alt="${product.title}"
-          class="product-cart"
-        />
-      </div>
-
-      <div class="feature-content">
-        <p class="feature-item-text">${product.title}</p>
-        <h3 class="feature-heading">${product.description}</h3>
-        <p class="feature-price">${product.price}</p>
-      </div>
-    </li>
-  `;
 };

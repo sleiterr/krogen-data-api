@@ -94,4 +94,8 @@
   margin-right: 105px;
 }
 
+.nav-item:nth-child(2) .nav-link {
+ text-transform: uppercase;
+}
+
 /* no margin-right for last-child "Contact-us" */

@@ -5,12 +5,12 @@
 .section-hero {
   position: relative;
 
-  width: 100vw;
-  height: 100vh;
+  /* width: 100vw;
+  height: 100vh; */
   overflow: hidden;
 }
 
-.image-in-slide {
+/* .image-in-slide {
   position: absolute;
 
   top: 0;
@@ -21,14 +21,30 @@
   object-fit: cover;
   object-position: center;
   z-index: 1;
-}
+} */
 
 .hero-container {
-  position: absolute;
+  background-image: linear-gradient(
+      90deg,
+      rgba(148, 120, 167, 0.6) 50%,
+      rgba(148, 120, 167, 0.6) 100%
+    ),
+    url("/img/forsiden.jpg");
+  background-size: auto 100%;
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  /* position: absolute;
   top: 40%;
   right: 35%;
 
-  z-index: 2;
+  z-index: 2; */
 }
 
 .hero-content {
@@ -36,14 +52,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-
-  min-width: 160px;
 }
 
 .hero-title {
   font-family: "Square Peg";
   font-weight: 400;
-  font-size: 75px;
+  font-size: clamp(65px, 5vw, 75px);
 
   color: #fff;
   text-align: center;
@@ -53,12 +67,15 @@
 }
 
 .hero-context {
-  font-weight: 500;
-  font-size: 18px;
+  font-weight: 400;
+  font-size: clamp(18px, 4vw, 22px);
 
   color: #fff;
   text-align: center;
-  line-height: 22px;
+  /* line-height: 22px; */
+  /* width: 25%; */
+}
 
-  margin-bottom: 121px;
+.hero-subtitle {
+  width: 75%;
 }
