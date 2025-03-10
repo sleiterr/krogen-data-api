@@ -1,5 +1,6 @@
 import { fetchReviews } from "../Data/fetch-data.js";
 import { productHeroTemplate } from "../js/product/hero-product.js";
+import { faqtHeroTemplate } from "../js/faq/faq-template.js";
 
 export const templates = () => {
   const insertTemplate = (selector, templateFunction) => {
@@ -82,17 +83,17 @@ export const templates = () => {
   /* ------------ HERO-CUSTOMER ------------ */
   const customerHeroTemplate = () => {
     return `
-     <img class="image-customer" src="" alt="" />
-
-        <div class="customer-hero-wrapper">
-          <div class="hero-customer">
-            <p class="customer-caption">Bliv medlem af vores</p>
-            <h1 class="customer-title">kundeklub</h1>
-            <p class="customer-context">
-              og få ekslusive tilbud og nyheder før alle andre
-            </p>
-          </div>
-        </div>
+    <div class="customer-hero">
+     <div class="customer-hero-wrapper">
+      <div class="hero-customer">
+       <p class="customer-caption">Bliv medlem af vores</p>
+       <h1 class="customer-title">kundeklub</h1>
+       <p class="customer-context">
+        og få ekslusive tilbud og nyheder før alle andre
+       </p>
+      </div>
+     </div>
+    </div>
     `;
   };
 
@@ -258,6 +259,7 @@ export const templates = () => {
   };
 
   insertTemplate(".product-hero", productHeroTemplate);
+  insertTemplate(".faq-hero", faqtHeroTemplate);
 
   insertTemplate(".footer", footerTemplate);
 };
