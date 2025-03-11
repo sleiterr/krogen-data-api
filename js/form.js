@@ -1,52 +1,52 @@
 // form submit event handler
 
 export function subscription() {
-  document
-    .querySelector("#order-data")
-    .addEventListener("submit", function (e) {
-      e.preventDefault();
-      const form = e.currentTarget;
-      const user = form.elements.firstName.value.trim();
-      const email = form.elements.email.value.trim();
+  const form = document.querySelector("#order-data");
 
-      const label = document.querySelector(".input-title-email");
-      const message = document.querySelector(".mesg");
-      // const heading = document.querySelector(".subscription-title");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const user = form.elements.firstName.value.trim();
+    const email = form.elements.email.value.trim();
 
-      message.innerHTML = "";
-      message.style.visibility = "hidden";
-      label.style.display = "block";
-      //   message.style.display = "none";
+    const label = document.querySelector(".input-title-email");
+    const message = document.querySelector(".mesg");
+    // const heading = document.querySelector(".subscription-title");
 
-      if (user === "" || email === "") {
-        alert("All form fields must de filled in");
-        return;
-      }
+    message.innerHTML = "";
+    message.style.visibility = "hidden";
+    label.style.display = "block";
+    //   message.style.display = "none";
 
-      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailPattern.test(email)) {
-        label.style.display = "none";
-        // console.log("not valid email");
-        message.innerHTML = "not valid email";
-        message.style.color = "violet";
-        // message.style.display = "block";
-        message.style.visibility = "visible";
-        return;
-      } else { 
-        window.location.href = "../subscribers.html";
-      }
+    if (user === "" || email === "") {
+      alert("All form fields must de filled in");
+      return;
+    }
 
-      // form.style.display = "none";
-      // label.innerHTML = "We will contact you";
-      // label.style.display = "block";
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      label.style.display = "none";
+      // console.log("not valid email");
+      message.innerHTML = "not valid email";
+      message.style.color = "violet";
+      // message.style.display = "block";
+      message.style.visibility = "visible";
+      return;
+    } else {
+      window.location.href = "../subscribers.html";
+    }
 
-      // object
-      const formData = {
-        name: user,
-        email: email,
-      };
+    // form.style.display = "none";
+    // label.innerHTML = "We will contact you";
+    // label.style.display = "block";
 
-      console.log(formData);
-      form.reset();
-    });
+    // object
+    const formData = {
+      name: user,
+      email: email,
+    };
+
+    console.log(formData);
+    form.reset();
+  });
 }

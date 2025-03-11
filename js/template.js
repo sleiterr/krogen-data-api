@@ -1,8 +1,9 @@
 import { fetchReviews } from "../Data/fetch-data.js";
+import { questionsReviews } from "../Data/fetch-data.js";
 import { productHeroTemplate } from "../js/product/hero-product.js";
 import { faqtHeroTemplate } from "../js/faq/faq-template.js";
 
-export const templates = () => {
+export const templates = async () => {
   const insertTemplate = (selector, templateFunction) => {
     const htmlContainer = document.querySelector(selector);
 
@@ -10,7 +11,6 @@ export const templates = () => {
 
     htmlContainer.insertAdjacentHTML("beforeend", templateFunction());
   };
-  // hjælpefunktion - indesætter dynamisk template-functions i html'en
 
   /* ------------ NAV-BAR ------------ */
   const navTemplate = () => {
@@ -52,7 +52,7 @@ export const templates = () => {
              <a href="./faq.html" class="nav-link" target="_blank">faq</a>
           </li>
           <li class="nav-item">
-            <a href="#customerclub" class="nav-link">Kundeklubben</a>
+           <a href="./customer.html" class="nav-link" target="_blank">Kundeklubben</a>
           </li>
         </ul>
       </nav>
@@ -164,7 +164,7 @@ export const templates = () => {
            <div class="form-container container">
           <div class="form-subscription">
             <h2 class="input-title-email"></h2>
-            <form action="#" method="POST" class="form-data" id="order-data">
+            <form action="#" method="#" class="form-data" id="order-data">
               <div class="name-form">
                 <input
                   type="text"
@@ -262,4 +262,45 @@ export const templates = () => {
   insertTemplate(".faq-hero", faqtHeroTemplate);
 
   insertTemplate(".footer", footerTemplate);
+
+  const accordionHTML = await renderAccordion();
+  insertTemplate(".accordion-container", () => accordionHTML);
+};
+
+const renderAccordion = async () => {
+  const questions = await questionsReviews();
+  const accordionContainer = document.querySelector(".accordion-container");
+
+  if (!questions || questions.length === 0) {
+    accordionContainer.innerHTML = "<p>No questions available.</p>";
+    return;
+  }
+
+  let accordionContent = "";
+
+  questions.forEach((item) => {
+    let content;
+
+    if (item.answer.includes("<ul>")) {
+      content = item.answer.replace("<ul>", '<ul class="acc-list">');
+    } else {
+      content = `<p class="acc-content">${item.answer}</p>`;
+    }
+
+    accordionContent += `
+     <div class="accordion">
+        <div class="accordion-icon">
+            <i class="icon-cheveron-right"></i>
+        </div>
+        <div class="content-container">
+            <p class="accord-title">${item.question}</p>
+        </div>
+        <div class="panel">
+            ${content}
+        </div>
+     </div>
+    `;
+  });
+
+  return accordionContent;
 };

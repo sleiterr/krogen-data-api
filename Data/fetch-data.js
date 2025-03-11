@@ -22,3 +22,15 @@ export const fetchReviews = async () => {
     console.error("Error fetching or parsing data:", error);
   }
 };
+
+export const questionsReviews = async () => {
+  try {
+    const questions = await fetch(
+      "https://mcd-web-legekrogen-server.vercel.app/questions"
+    );
+    const userinfo = await questions.json();
+    return userinfo.data;
+  } catch (error) {
+    console.error("Error fetching or parsing data:", error);
+  }
+};
