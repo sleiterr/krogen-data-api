@@ -45,15 +45,20 @@ export const templates = async () => {
         </div>
 
         <ul class="nav-menu">
-          <li class="nav-item">
-            <a href="./products.html" class="nav-link" target="_blank">Producter</a>
-          </li>
-          <li class="nav-item">
-             <a href="./faq.html" class="nav-link" target="_blank">faq</a>
-          </li>
-          <li class="nav-item">
-           <a href="./customer.html" class="nav-link" target="_blank">Kundeklubben</a>
-          </li>
+        <li class="nav-item">
+        <a href="./products.html" class="nav-link" target="_blank">Producter</a>
+        </li>
+        <li class="nav-item">
+        <a href="./faq.html" class="nav-link" target="_blank">faq</a>
+        </li>
+        <li class="nav-item">
+        <a href="./customer.html" class="nav-link" target="_blank">Kundeklubben</a>
+        </li>
+        <li class="nav-item">
+        <a href="#" class="nav-link">
+          <i class="icon-shopping-cart"></i>
+        </a>
+        </li>
         </ul>
       </nav>
         

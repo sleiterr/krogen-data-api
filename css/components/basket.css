@@ -23,35 +23,20 @@
   box-shadow: -1px 8px 12px 0px rgba(58, 58, 58, 0.61);
 
   padding: 20px 30px;
-  width: 820px;
+  width: 690px;
 
   min-height: 380px;
   height: auto;
 }
 
 .basket-card {
-  /* position: relative; */
-
   display: flex;
   align-items: center;
   justify-content: center;
 
   padding: 35px 0 35px 0;
   border-bottom: 2px solid rgb(193, 173, 206);
-
-  /* width: 100%; */
 }
-
-/* .basket-card::after {
-  content: "";
-  position: absolute;
-
-  bottom: -35px;
-  left: 50%;
-  width: 100%;
-  border-bottom: 2px solid rgb(193, 173, 206);
-  transform: translateX(-50%);
-} */
 
 .basket-img {
   width: 260px;
@@ -86,4 +71,20 @@
 
   align-self: flex-end;
   padding-bottom: 10px;
+}
+
+.total-box {
+  align-self: flex-end;
+}
+.total-price {
+  font-weight: 700;
+  font-size: 22px;
+  color: #355674;
+}
+
+.shoping-card {
+}
+
+.icon-shopping-cart {
+  font-size: 26px;
 }
