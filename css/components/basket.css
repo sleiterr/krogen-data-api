@@ -48,7 +48,6 @@
   border: 0.5px solid rgba(112, 112, 112, 1);
   border-radius: 16px;
 
-  margin-right: 26px;
 }
 
 .card-info {
@@ -80,6 +79,7 @@
 .total-box {
   align-self: flex-end;
 }
+
 .total-price {
   font-weight: 700;
   font-size: 22px;

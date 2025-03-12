@@ -354,4 +354,55 @@
   .customer-hero-wrapper {
     top: 75%;
   }
+
+  /**==============================*/
+  /*!BASKET */
+  /**==============================*/
+
+  .basket-box {
+    gap: 20px;
+
+    padding: 30px 20px;
+    min-width: 375px;
+
+    min-height: 125px;
+    height: auto;
+  }
+
+  .basket-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0px 0 25px 0;
+    width: 100%;
+  }
+
+  .basket-img {
+    width: 95px;
+    height: 95px;
+
+    margin-right: 0px;
+  }
+
+  .card-info {
+    font-size: 12px;
+
+    margin-right: 14px;
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+
+  .card-price {
+    font-size: 22px;
+
+    align-self: flex-end;
+    padding-bottom: 10px;
+  }
+
+  .total-price {
+    font-size: 22px;
+  }
 }

@@ -39,9 +39,9 @@ export const templates = async () => {
         </div>
 
         <div class="nav-item basket-mob">
-         <a href="#" class="nav-link">
-          <i class="icon-shopping-cart"></i>
-         </a>
+          <a href="./baske.html" class="nav-link">
+           <i class="icon-shopping-cart"></i>
+          </a>
         </div>
 
         <div class="burger-btn">
@@ -61,9 +61,9 @@ export const templates = async () => {
         <a href="./customer.html" class="nav-link" target="_blank">Kundeklubben</a>
         </li>
         <li class="nav-item basket-bar">
-        <a href="#" class="nav-link">
-          <i class="icon-shopping-cart"></i>
-        </a>
+          <a href="./baske.html" class="nav-link">
+           <i class="icon-shopping-cart"></i>
+          </a>
         </li>
         </ul>
       </nav>
