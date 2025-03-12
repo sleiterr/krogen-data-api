@@ -209,7 +209,7 @@
   position: relative;
 }
 
-.icon-cheveron-right {
+.icon-chevron-right {
   position: absolute;
   right: 0;
   top: -10px;
@@ -219,6 +219,6 @@
   transition: transform 250ms ease;
 }
 
-.accordion.active .icon-cheveron-right {
+.accordion.active .icon-chevron-right {
   transform: rotate(-90deg);
 }

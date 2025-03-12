@@ -38,6 +38,10 @@
   border-bottom: 2px solid rgb(193, 173, 206);
 }
 
+.basket-mob {
+  display: none;
+}
+
 .basket-img {
   width: 260px;
   height: 260px;

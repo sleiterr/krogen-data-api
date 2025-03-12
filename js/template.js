@@ -38,6 +38,12 @@ export const templates = async () => {
           </a>
         </div>
 
+        <div class="nav-item basket-mob">
+         <a href="#" class="nav-link">
+          <i class="icon-shopping-cart"></i>
+         </a>
+        </div>
+
         <div class="burger-btn">
           <div class="bar"></div>
           <div class="bar"></div>
@@ -54,7 +60,7 @@ export const templates = async () => {
         <li class="nav-item">
         <a href="./customer.html" class="nav-link" target="_blank">Kundeklubben</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item basket-bar">
         <a href="#" class="nav-link">
           <i class="icon-shopping-cart"></i>
         </a>
@@ -295,7 +301,7 @@ const renderAccordion = async () => {
     accordionContent += `
      <div class="accordion">
         <div class="accordion-icon">
-            <i class="icon-cheveron-right"></i>
+            <i class="icon-chevron-right"></i>
         </div>
         <div class="content-container">
             <p class="accord-title">${item.question}</p>
