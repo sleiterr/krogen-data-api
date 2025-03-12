@@ -1,0 +1,224 @@
+/**==============================*/
+/*! FAQ-HERO*/
+/**==============================*/
+
+.faq-hero-container {
+  background-image: url("/img/FAQ.jpg");
+  background-size: auto 100%;
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.faq-inner {
+  position: absolute;
+  top: 66%;
+  left: 50%;
+  background-color: rgba(193, 173, 206, 0.58);
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 250px;
+}
+
+.hero-faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq-title {
+  font-weight: 300;
+  font-size: clamp(55px, 5vw, 60px);
+
+  color: #fff;
+  text-transform: uppercase;
+
+  text-align: center;
+  letter-spacing: 1.13px;
+  line-height: normal;
+}
+
+.faq-caption {
+  font-family: "Square Peg";
+  font-weight: 500;
+  font-size: clamp(40px, 4vw, 50px);
+
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  line-height: normal;
+}
+
+.faq-subtitle {
+  font-weight: 400;
+  font-size: clamp(18px, 3vw, 22px);
+
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  line-height: normal;
+
+  max-width: 600px;
+  min-width: 300px;
+  width: 100%;
+}
+
+.customer-context {
+  font-weight: 500;
+  font-size: 18px;
+
+  color: #fff;
+  text-align: center;
+  line-height: 22px;
+}
+
+/**==============================*/
+/*! ACCORDION-SECTION*/
+/**==============================*/
+
+.accordion-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 90px 0;
+}
+
+.accordion {
+  position: relative;
+  cursor: pointer;
+  /* padding: 18px; */
+
+  text-align: left;
+  border: 1px solid rgba(188, 188, 188, 1);
+  border-radius: 16px;
+  outline: none;
+  transition: 0.3s ease;
+  padding: 30px 35px;
+
+  max-width: 600px;
+  min-width: 300px;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.content-container {
+  display: flex;
+  align-items: center;
+
+  gap: 24px;
+}
+
+.accord-title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2em;
+  letter-spacing: normal;
+
+  color: #355674;
+  width: 320px;
+}
+
+.acc-content {
+  font-weight: 400;
+  font-size: 18px;
+
+  color: #355674;
+  line-height: 1.2em;
+  letter-spacing: normal;
+
+  padding: 40px 0 20px;
+  width: 320px;
+}
+
+.list-item,
+.panel {
+  font-weight: 400;
+  font-size: 18px;
+
+  color: #355674;
+  line-height: 1.2em;
+}
+
+/* .acc {
+  padding: 40px 0 40px;
+} */
+
+.acc-list .panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  gap: 12px;
+  
+  /* font-size: 16px;
+  line-height: 1em;
+  color: #868e96;
+
+  margin-bottom: 24px; */
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
+/* Hvis .accordion har .actice class'en, skal den være display block. Hvis ikke - display none */
+.accordion .panel {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+  /* display: none; */
+}
+
+.accordion.active .panel {
+  max-height: 220px;
+  opacity: 1;
+  /* display: block; */
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  position: relative;
+  top: 5px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.panel::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(188, 188, 188, 1);
+  max-width: 590px;
+  min-width: 300px;
+  width: 100%;
+}
+
+/* Icons */
+
+.accordion-icon {
+  position: relative;
+}
+
+.icon-cheveron-right {
+  position: absolute;
+  right: 0;
+  top: -10px;
+  font-size: 45px;
+  color: #9478a7;
+  transform: rotate(90deg);
+  transition: transform 250ms ease;
+}
+
+.accordion.active .icon-cheveron-right {
+  transform: rotate(-90deg);
+}
