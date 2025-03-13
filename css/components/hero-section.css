@@ -16,7 +16,7 @@
       rgba(148, 120, 167, 0.6) 50%,
       rgba(148, 120, 167, 0.6) 100%
     ),
-    url("/img/forsiden.jpg");
+    url("./img/forsiden.jpg");
   background-size: auto 100%;
   background-position: center top;
   background-repeat: no-repeat;

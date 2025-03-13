@@ -13,7 +13,7 @@
       rgba(148, 120, 167, 0.7) 50%,
       rgba(148, 120, 167, 0.7) 100%
     ),
-    url("/img/medlem.jpg");
+    url("./img/medlem.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

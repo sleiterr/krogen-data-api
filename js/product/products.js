@@ -7,15 +7,21 @@ export const productList = () => {
   console.log(products);
 
   const productListContainer = document.querySelector(".feature-section");
+  const productListContainerItem = document.querySelector(
+    ".feature-section-item"
+  );
 
-  if (!productListContainer) return;
+  if (!productListContainer && !productListContainerItem) return;
 
-  productListContainer.innerHTML = `
+  const renderProducts = (container, items) => {
+    if (!container) return;
+
+    container.innerHTML = `
     <div class="feaure-container container">
       <div class="feature-caption">
         <h2 class="feature-title">Et udpluk af vores</h2>
         <p class="feature-subtitle">Legetøj</p>
-      </div>
+        </div>
         <div class="feature-box">
           <!--? FEATURE-LIST -->
           <ul class="features-list"></ul>
@@ -23,10 +29,13 @@ export const productList = () => {
     </div>
   `;
 
-  const featureList = productListContainer.querySelector(".features-list"
+    const featureList = container.querySelector(".features-list");
+    items.forEach((product) => {
+      featureList.insertAdjacentHTML("beforeend", featureTemplate(product));
+    });
+  };
 
-  );
-  products.forEach((product) => {
-   featureList.insertAdjacentHTML('beforeend', featureTemplate(product))
-  });
+  renderProducts(productListContainer, products);
+
+  renderProducts(productListContainerItem, products.slice(0, 3));
 };

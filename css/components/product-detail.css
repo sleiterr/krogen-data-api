@@ -24,7 +24,7 @@
 }
 
 .product-hero-wrapper {
-  background-image: url("/img/produkter.jpg");
+  background-image: url("./img/produkter.jpg");
 
   background-size: auto 100%;
   background-position: center top;

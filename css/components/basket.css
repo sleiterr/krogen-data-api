@@ -30,11 +30,14 @@
 }
 
 .basket-card {
+  position: relative;
+
   display: flex;
   align-items: center;
   justify-content: center;
 
   padding: 35px 0 35px 0;
+  /* border: 1px solid red; */
   border-bottom: 2px solid rgb(193, 173, 206);
 }
 
@@ -45,9 +48,11 @@
 .basket-img {
   width: 260px;
   height: 260px;
-  border: 0.5px solid rgba(112, 112, 112, 1);
-  border-radius: 16px;
 
+  border-radius: 16px;
+  border: 0.5px solid rgba(112, 112, 112, 1);
+
+  margin-right: 18px;
 }
 
 .card-info {
@@ -86,9 +91,18 @@
   color: #355674;
 }
 
-.shoping-card {
-}
-
 .icon-shopping-cart {
   font-size: 26px;
+}
+
+.close-x {
+  position: absolute;
+
+  top: 30px;
+  right: 12px;
+}
+
+.mark-x {
+  width: 25px;
+  height: 25px;
 }
