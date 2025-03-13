@@ -161,7 +161,7 @@ export const templates = async () => {
             <h4 class="costomer-title">Kundeklub ?</h4>
           </div>
           <div class="link-box">
-            <a href="../customer.html" class="customer-link" target="_blank">bliv medlem  nu !</a>
+              <a href="/customer.html" class="customer-link" target="_blank">bliv medlem nu !</a>
           </div>
         </div>
         `;
