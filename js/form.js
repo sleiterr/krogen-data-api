@@ -33,7 +33,7 @@ export function subscription() {
       message.style.visibility = "visible";
       return;
     } else {
-      window.location.href = "/subscribers.html";
+      window.location.href = "subscribers.html";
     }
 
     // form.style.display = "none";
