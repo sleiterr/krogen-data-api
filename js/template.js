@@ -2,6 +2,7 @@ import { fetchReviews } from "../Data/fetch-data.js";
 import { questionsReviews } from "../Data/fetch-data.js";
 import { productHeroTemplate } from "../js/product/hero-product.js";
 import { faqtHeroTemplate } from "../js/faq/faq-template.js";
+import { basketModalTemplate } from "../js/basket/template-modal.js";
 
 export const templates = async () => {
   const insertTemplate = (selector, templateFunction) => {
@@ -271,6 +272,8 @@ export const templates = async () => {
 
   insertTemplate(".product-hero", productHeroTemplate);
   insertTemplate(".faq-hero", faqtHeroTemplate);
+  insertTemplate(".basket-box", basketModalTemplate);
+  
 
   insertTemplate(".footer", footerTemplate);
 

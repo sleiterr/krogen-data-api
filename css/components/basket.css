@@ -133,6 +133,8 @@
   display: flex;
 }
 
+/*? NO-SCROLL WHEN BASKET FULL */
+
 .no-scroll {
   position: fixed;
   overflow: hidden;
