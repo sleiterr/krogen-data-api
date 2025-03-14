@@ -7,6 +7,7 @@ import { accordionFaq } from "../js/faq/accordion.js";
 
 import { subscription } from "./form.js";
 import { initBurgerMenu } from "./burger-menu.js";
+import { basketModal } from "./basket/modal-basket.js";
 console.log("test");
 
 
@@ -14,6 +15,7 @@ console.log("test");
 templates();
 productList();
 accordionFaq();
+basketModal();
 
 initBurgerMenu();
 subscription();
