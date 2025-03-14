@@ -1,3 +1,5 @@
+// products.js
+
 import { fetchProducts } from "../../Data/fetch-data.js";
 import { featureTemplate } from "../product/feature-product.js";
 

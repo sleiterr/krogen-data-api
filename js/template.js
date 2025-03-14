@@ -272,8 +272,22 @@ export const templates = async () => {
 
   insertTemplate(".product-hero", productHeroTemplate);
   insertTemplate(".faq-hero", faqtHeroTemplate);
-  insertTemplate(".basket-box", basketModalTemplate);
-  
+
+  const renderBasket = () => {
+    const favoritesArray = JSON.parse(localStorage.getItem("favList") || "[]");
+
+    if (favoritesArray.length > 0) {
+      favoritesArray.forEach((product) => {
+        insertTemplate(".basket-box", () => basketModalTemplate(product));
+      });
+    } else {
+      insertTemplate(".basket-box", () => "<p>Кошик порожній</p>");
+    }
+  };
+
+  renderBasket(); // Викликаємо функцію для рендеру кошика
+
+  // Всі інші виклики шаблонів залишаються без змін
 
   insertTemplate(".footer", footerTemplate);
 
